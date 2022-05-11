@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+html {
+    --main-color: hsl(172, 67%, 45%);
+    --very-dark-cyan: hsl(183, 100%, 15%);
+    --dark-grayish-cyan: hsl(186, 14%, 43%);
+    --grayish-cyan: hsl(184, 14%, 56%);
+    --light-grayish-cyan: hsl(185, 41%, 84%);
+    --very-light-grayish-cyan: hsl(189, 41%, 97%);
+}
+
+body {
+    font-family: 'Space Mono', monospace;
+    font-size: 24px;
+    color: var(--very-dark-cyan);
+    background-color: var(--light-grayish-cyan);
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    font-size: 1.2rem;
+    letter-spacing: 0.5rem;
+    margin: 3rem 0;
+    opacity: 0.6;
+}
+
+h3 {
+    color: var(--main-color);
+    font-size: 2rem;
+    margin: 0;
+}
+
+main {
+    width: 60%;
+    margin: auto;
+    background-color: white;
+    border-radius: 10px;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+input {
+    padding: 0;
+    width: 100%;
+    border: 0;
+    height: 2rem;
+    background-color: var(--very-light-grayish-cyan);
+    text-align: end;
+    font-family: inherit;
+    color: var(--very-dark-cyan);
+    font-size: 1.4rem;
+}
+
+input:hover, button:hover {
+    cursor: pointer;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.bill-inputs {
+    width: 47%;
+}
+
+.bill-inputs__input-group {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+}
+
+.bill-inputs__label {
+    font-size: 0.8rem;
+    color: var(--grayish-cyan);
+    display: flex;
+    justify-content: space-between;
+}
+
+.bill-inputs__label .error {
+    color: #ff967e;
+}
+
+.bill-inputs__input {
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    margin-top: 0.2rem;
+}
+
+.bill-inputs__input div {
+    position: absolute;
+}
+
+.bill-inputs__input div img {
+    position: relative;
+    left: 1rem;
+}
+
+.bill-inputs__input input {
+    padding-right: 1rem;
+}
+
+.bill-inputs__input input.error {
+    border: 2px solid #ff967e;
+    border-radius: 5px;
+}
+
+.tip-grid {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 1rem 0 0 0;
+    padding: 0;
+    row-gap: 1rem;
+}
+
+.tip-grid__tip-choice {
+    width: 30%;
+}
+
+.tip-grid__tip-choice button, .tip-grid__tip-choice input {
+    height: 2.5rem;
+    font-family: inherit;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    border: 0;
+    width: 100%;
+}
+
+.tip-grid__tip-choice button {
+    background-color: var(--very-dark-cyan);
+    color: white;
+}
+
+.tip-grid__tip-choice button.active {
+    background-color: var(--main-color);
+    color: var(--very-dark-cyan);
+}
+
+.tip-grid__tip-choice button:hover {
+    color: var(--very-dark-cyan);
+    background-color: #9FE8DF;
+}
+
+.tip-grid__tip-choice input {
+    text-align: center;
+}
+
+.result {
+    width: 47%;
+    background-color: var(--very-dark-cyan);
+    border-radius: 10px;
+    color: white;
+    font-size: 0.9rem;
+    letter-spacing: 0.05rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.result div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+}
+
+.result .result__tip-amount, .result .result__total-bill {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.result__tip-amount span, .result__total-bill span {
+    color: var(--grayish-cyan);
+    font-size: 0.7rem;
+}
+
+.result button {
+    width: 80%;
+    padding: 0.6rem 0;
+    font-family: inherit;
+    font-size: 1rem;
+    border: 0;
+    border-radius: 5px;
+    background-color: var(--main-color);
+}
+
+.result button:hover {
+    background-color: #9FE8DF;
+}
+
+@media screen and (max-width: 950px) {
+    main {
+        flex-direction: column;
+    }
+
+    .bill-inputs, .result {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    main {
+        width: 100%;
+        padding: 2rem 0;
+    }
+
+    .bill-inputs__wrapper {
+        width: 80%;
+        margin: auto;
+    }
+
+    .tip-grid__tip-choice {
+        width: 45%;
+    }
+
+    .result {
+        width: 80%;
+        margin: auto;
+    }
+}

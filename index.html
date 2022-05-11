@@ -8,7 +8,64 @@
     <title>Tip Calculator</title>
 </head>
 <body>
+    <header>
+        <h1>SPLI<br>TTER</h1>
+    </header>
+
+    <main>
+        <section id="bill-inputs" class="bill-inputs">
+            <div class="bill-inputs__wrapper">
+                <div class="bill-inputs__input-group">
+                    <label for="bill" class="bill-inputs__label">Bill</label>
+                    <div class="bill-inputs__input">
+                        <div>
+                            <img src="./assets/images/icon-dollar.svg" alt="dollar">
+                        </div>
+                        <input type="number" min="0" step="any" id="bill" name="bill" placeholder="0">
+                    </div>
+                </div>
+
+                <div class="bill-inputs__input-group">
+                    <label for="tip" class="bill-inputs__label">Select Tip %</label>
+                    <ul class="tip-grid">
+                    <li class="tip-grid__tip-choice"><button value="5" type="button">5%</button></li>  
+                    <li class="tip-grid__tip-choice"><button value="10" type="button">10%</button></li>  
+                    <li class="tip-grid__tip-choice"><button value="15" type="button">15%</button></li>  
+                    <li class="tip-grid__tip-choice"><button value="25" type="button">25%</button></li>  
+                    <li class="tip-grid__tip-choice"><button value="50" type="button">50%</button></li>  
+                    <li class="tip-grid__tip-choice"><input type="number" min="0" step="1" id="tip" name="tip" placeholder="Custom"></li>  
+                    </ul>
+                </div>
+
+                <div class="bill-inputs__input-group">
+                    <label for="people" id="peopleLabel" class="bill-inputs__label"><span>Number of People</span></label>
+                    <div class="bill-inputs__input">
+                        <div>
+                            <img src="./assets/images/icon-person.svg" alt="person">
+                        </div>
+                        <input type="number" min="0" step="1" id="people" name="people" placeholder="0">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="result" class="result">
+            <div>
+                <div class="result__tip-amount">
+                    <p>Tip Amount<br><span>/ person</span></p>
+                    <h3>$0.00</h3>
+                </div>
     
+                <div class="result__total-bill">
+                    <p>Total<br><span>/ person</span></p>
+                    <h3>$0.00</h3>
+                </div>
+            </div>
+
+            <button type="button">RESET</button>
+        </section>
+    </main>
+
     <script src="index.js"></script>
 </body>
 </html>
